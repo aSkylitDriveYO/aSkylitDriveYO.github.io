@@ -34,7 +34,7 @@
     float: left;
     width: 50%;
     height: 100vh;
-    overflow: visible; }
+    overflow: hidden; }
   .menu-nav {
     margin: 0;
     padding: 0;
@@ -84,6 +84,37 @@
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("/dist/img/tesseract2s.png");
+      width: 220px;
+      height: 220px; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
 
 * {
   box-sizing: border-box; }
@@ -141,10 +172,35 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 0.4rem;
+      opacity: 0.35;
+      position: relative;
+      display: inline-block;
+      outline: 0; }
+      main .icons a span {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        background: #222222;
+        color: #ddc642;
+        top: -2em;
+        font-size: .4em;
+        height: 2em;
+        line-height: 2.25em;
+        left: 50%;
+        opacity: 0;
+        transition: all 0.5s ease-out;
+        width: 5.5em;
+        margin-left: -2.75em;
+        background: transparent;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400; }
       main .icons a:hover {
         color: #ddc642;
-        transition: all 0.5s ease-out; }
+        transition: all 0.5s ease-out;
+        opacity: 1; }
+        main .icons a:hover span {
+          opacity: 1; }
   main#home {
     overflow: hidden; }
     main#home h1 {
