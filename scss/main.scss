@@ -173,6 +173,53 @@ main {
 
 }
 
+// Work/Projects
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0.7rem;
+
+    img {
+        width: 100%;
+        border: 3px #fff solid;
+
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondaryColor;
+            @include easeOut
+        }
+    }
+}
+
+//Button Styles
+
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    &:hover {
+        background-color: $secondaryColor;
+        color: setTextColor($secondaryColor);
+
+    }
+}
+
+.btn-dark {
+    @extend .btn;
+    background: darken($color: $primaryColor, $amount: 50);
+    color: #fff;
+}
+
+.btn-light {
+    @extend .btn;
+    background: lighten($color: $primaryColor, $amount: 30);
+    color: rgb(0, 0, 0);
+}
+
+
+
 #main-footer {
     text-align: center;
     padding: 1rem;
