@@ -30,6 +30,15 @@ $backgroundOpacity: 0.3;
     }
 }
 
+//Set text color to contrast with background
+@function setTextColor($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+
 // MEdia Queries 
 
 @mixin mediaSm {
