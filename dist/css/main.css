@@ -213,6 +213,44 @@ main {
       border-color: #ddc642;
       transition: all 0.5s ease-out; }
 
+#contact {
+  display: flex;
+  justify-content: center; }
+  #contact .form-submit {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 50%; }
+    #contact .form-submit h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem; }
+    #contact .form-submit form {
+      width: 100%; }
+      #contact .form-submit form .form-row {
+        display: flex;
+        justify-content: space-between; }
+        #contact .form-submit form .form-row .form-control {
+          width: 50%;
+          font-size: 20px;
+          padding: 5px; }
+          #contact .form-submit form .form-row .form-control:focus {
+            outline: 0;
+            background-color: #ddc642; }
+      #contact .form-submit form textarea {
+        width: 100%;
+        padding: 0;
+        margin-top: 3px; }
+        #contact .form-submit form textarea:focus {
+          outline: 0;
+          background-color: #ddc642; }
+      #contact .form-submit form button {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 20px; }
+        #contact .form-submit form button:hover {
+          background-color: #ddc642; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
